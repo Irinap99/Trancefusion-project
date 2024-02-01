@@ -1,0 +1,370 @@
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/img-1.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 3rem 4rem 1rem rgba($primary-purple, 0.1);
+  margin-bottom: 10rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($violet-dark, 0.65);
+    z-index: 1;
+  }
+
+  &__content {
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: $bp-smallest-1) {
+      flex-direction: column;
+    }
+  }
+
+  &__text-box {
+    z-index: 100;
+    margin-left: 6rem;
+    @media only screen and (max-width: $bp-smaller) {
+      margin-left: 4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      margin-left: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      margin-top: 15rem;
+    }
+  }
+
+  &__subtitle--1 {
+    @include MoveInBottom;
+
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    color: $violet-light-3;
+    margin-left: 8rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-left: 4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      margin-left: 2rem;
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1rem;
+    }
+  }
+  &__subtitle--2 {
+    @include MoveInBottom;
+
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $violet-light-3;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-left: 4rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      margin-left: 2rem;
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1rem;
+    }
+  }
+  &__title {
+    animation: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    width: 90%;
+    color: $purple-light-2;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -0.1rem;
+    font-size: 5rem;
+    display: inline-block;
+
+    background-color: rgba($primary-purple, 0.8);
+    padding-left: 6rem;
+
+    clip-path: polygon(6% 0, 100% 0, 96% 100%, 0% 100%);
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 2rem;
+      padding-left: 4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1.6rem;
+    }
+  }
+  &__text {
+    display: inline-block;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 1.5rem 0;
+    @include MoveInBottom;
+    position: relative;
+    margin-bottom: 4rem;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1rem;
+    }
+  }
+
+  &__cta-border {
+    @include MoveInBottom;
+    // @include gradient-border;
+    display: inline-block;
+    position: absolute;
+    right: 55%;
+    top: 50%;
+    @media only screen and (max-width: $bp-large) {
+      top: 60%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      top: 50%;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      top: 45%;
+      right: 60%;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      top: 25%;
+      right: 40%;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      top: 40%;
+      right: 30%;
+    }
+  }
+  &__cta:link,
+  &__cta:visited {
+    display: inline-block;
+    color: $violet-light-3;
+    text-decoration: none;
+    font-size: 3.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    border: 2px solid $primary-purple;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      padding: 0.5rem;
+    }
+  }
+
+  &__cta:hover {
+    color: $violet-light-1;
+    box-shadow: 0 0 2rem 0.5rem rgba($primary-purple, 0.2);
+  }
+
+  &__cta:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 1rem 0.5rem rgba($primary-purple, 0.3);
+  }
+
+  &__featured {
+    @include MoveInBottom;
+    @include gradient-border;
+    background-color: $violet-dark;
+    max-height: 70rem;
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 1rem;
+    position: relative;
+    z-index: 222;
+    @media only screen and (max-width: $bp-smallest-1) {
+      width: 90%;
+      padding: 1rem;
+      height: auto;
+      margin: 0 2rem;
+      justify-content: unset;
+      margin-top: 6rem;
+      border: solid 1px $primary-purple;
+      background-image: none;
+      background-origin: unset;
+      background-clip: unset;
+    }
+  }
+
+  &__featured-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @media only screen and (max-width: $bp-smallest-1) {
+      max-width: 100%;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__featured-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: $violet-light-3;
+    margin-top: 1rem;
+    display: block;
+    height: 100%;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__artist {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: $bp-smallest-1) {
+      padding: 0;
+    }
+  }
+
+  &__artist-img-container {
+    @media only screen and (max-width: $bp-smallest-1) {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  &__artist-img {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    z-index: 9999;
+
+    &--1 {
+      background-image: url("../img/artist-1.png");
+    }
+    &--2 {
+      background-image: url("../img/artist-2.png");
+    }
+    &--3 {
+      background-image: url("../img/artist-3.png");
+    }
+    &--4 {
+      background-image: url("../img/artist-4.png");
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      max-width: 6rem;
+      max-height: 6rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__artist-element {
+    width: 100%;
+  }
+  &__artist-name {
+    display: block;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    align-self: flex-start;
+    color: $violet-light-2;
+    white-space: nowrap;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1.4rem;
+    }
+  }
+  &__artist-details {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 1rem;
+    margin-top: 0.5rem;
+    @media only screen and (max-width: $bp-smallest-1) {
+      column-gap: 0.2rem;
+    }
+  }
+  &__icon {
+    color: $purple-light-3;
+    height: 2rem;
+    width: 2rem;
+    @media only screen and (max-width: $bp-smaller) {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+  }
+  &__info {
+    font-weight: 200;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.tickets {
+  margin-bottom: 10rem;
+  padding-bottom: 6rem;
+
+  &__title {
+    margin-bottom: 4rem;
+    margin-top: 8rem;
+  }
+  &__pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    @media only screen and (max-width: $bp-large) {
+      gap: 2rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__plan {
+    border: 1px solid $primary-purple;
+    border-radius: 4px;
+    padding: 4rem;
+    width: 40rem;
+    height: 60rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+      height: 50rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      padding: 2rem;
+    }
+  }
+  &__offer {
+    margin-bottom: 3rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1.6rem;
+    }
+  }
+  &__price {
+    font-size: 10rem;
+    margin-bottom: 4rem;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 8rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 6rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 3rem;
+    }
+  }
+  &__perks-list {
+    list-style: none;
+  }
+  &__perk-icon {
+    color: $primary-purple;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.5rem;
+    &--vip {
+      color: $primary-violet;
+      height: 1.6rem;
+      width: 1.6rem;
+      margin-right: 0.5rem;
+    }
+  }
+  &__perk {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2.4rem; // because of the collumns
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__cta:link,
+  &__cta:visited {
+    font-size: 4rem;
+    text-decoration: none;
+    font-family: $link-font;
+    text-transform: uppercase;
+    color: $purple-text;
+    margin-top: auto;
+    border: 1px solid $primary-purple;
+    border-radius: 4px;
+    padding: 1rem;
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      margin-top: 4rem;
+    }
+  }
+  &__cta:hover,
+  &__cta:active {
+    color: $purple-light-2;
+    background-color: $primary-purple;
+  }
+}
+
+//Vip styling
+
+.vip {
+  border: 1px solid $primary-violet;
+  box-shadow: 0 0 2rem 1rem rgba($primary-violet, 0.3);
+}
+
+.vip-link:link,
+.vip-link:visited {
+  border: 1px solid $primary-violet;
+  color: $violet-text;
+  transition: all 0.3s;
+}
+
+.vip-link:hover,
+.vip-link:active {
+  background-color: $primary-violet;
+  color: $violet-light-2;
+}

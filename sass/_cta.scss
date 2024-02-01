@@ -1,0 +1,248 @@
+.cta {
+  margin-bottom: 10rem;
+  padding-bottom: 6rem;
+  box-shadow: 0 0 3rem 2rem rgba($primary-purple, 0.1);
+
+  &__title {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      max-width: 100vw;
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    padding: 3rem;
+
+    background-image: url(../img/cta-img.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+  &__overlay {
+    @include overlay;
+    z-index: 1;
+  }
+  &__subtitle {
+    color: $purple-light-2;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -0.1rem;
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+
+    background-color: rgba($primary-purple, 0.8);
+    padding: 0 5rem;
+    clip-path: polygon(6% 0, 100% 0, 96% 100%, 0% 100%);
+    position: relative;
+    z-index: 3;
+    white-space: nowrap;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 2.4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 2rem;
+      white-space: initial;
+      padding: 0 3rem;
+    }
+  }
+
+  &__text:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+  &__text {
+    display: block;
+    font-size: 2rem;
+    z-index: 3;
+    position: relative;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__text-title {
+    position: relative;
+    z-index: 3;
+    font-size: 2.4rem;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1.4rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &__perks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  &__perks-list {
+    list-style: none;
+    position: relative;
+    z-index: 3;
+  }
+  &__perk {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.2rem;
+    }
+
+    &--icon {
+      color: $primary-purple;
+      height: 1.6rem;
+      width: 1.6rem;
+      margin-right: 0.5rem;
+    }
+    &--name {
+      color: $purple-text;
+      font-size: 1.8rem;
+      margin-right: 0.5rem;
+      @media only screen and (max-width: $bp-smaller) {
+        font-size: 1.6rem;
+      }
+      @media only screen and (max-width: $bp-smallest-1) {
+        font-size: 1.4rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__btn:link,
+  &__btn:visited {
+    font-family: $link-font;
+    color: $purple-light-3;
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border: 1px solid rgba($primary-purple, 0.5);
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2rem;
+    }
+  }
+
+  &__btn:hover,
+  &__btn:active {
+    box-shadow: 0 0 2rem 0 rgba($primary-purple, 0.4);
+    color: $violet-light-1;
+  }
+  &__btn:active {
+    transform: translateY(1px);
+  }
+
+  &__testimonials {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  &__testimonials-title {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 1.8rem;
+    color: $purple-light-1;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2.4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 2rem;
+    }
+  }
+  &__testimonials-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 1.2rem;
+
+    border-bottom: 1px solid rgba($primary-purple, 0.5);
+    @media only screen and (max-width: $bp-large) {
+      gap: 1rem;
+      padding: 1rem;
+    }
+  }
+  &__testimonials-img {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    @media only screen and (max-width: $bp-large) {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  &__testimonials-text {
+    display: flex;
+    flex-direction: column;
+  }
+  &__testimonials-name {
+    font-size: 1.6rem;
+    font-weight: 200;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1.2rem;
+    }
+  }
+  &__testimonials-quote {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: $purple-light-3;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1.4rem;
+    }
+  }
+  &__testimonials-details {
+    font-size: 1.4rem;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1rem;
+    }
+  }
+}

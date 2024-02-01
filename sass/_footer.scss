@@ -1,0 +1,134 @@
+.sponsors {
+  opacity: 60%;
+  margin-bottom: 4rem;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6rem;
+    @media only screen and (max-width: $bp-small) {
+      gap: 4rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      gap: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    display: block;
+    height: 3rem;
+    width: auto;
+    @media only screen and (max-width: $bp-small) {
+      height: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      height: 1.6rem;
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column-reverse;
+  }
+  @media only screen and (max-width: $bp-smallest-2) {
+    gap: 1.6rem;
+  }
+
+  &__container {
+    width: 100%;
+  }
+
+  &__img {
+    display: block;
+    max-height: 10rem;
+    position: relative;
+    opacity: 60%;
+    @media only screen and (max-width: $bp-small) {
+      max-height: 6rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      max-height: 4rem;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+    @media only screen and (max-width: $bp-smallest-2) {
+      gap: 1.6rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: $link-font;
+    color: $purple-light-2;
+    opacity: 60%;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 1rem;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    opacity: 100%;
+  }
+
+  &__copyright {
+    width: 100%;
+  }
+
+  &__copyright p {
+    font-weight: 200;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 0.8rem;
+    }
+  }
+}

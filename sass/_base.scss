@@ -1,0 +1,126 @@
+//Purple Palette
+$primary-purple: #d946ef;
+$purple-light-1: #fbedfd;
+$purple-light-2: #f7dafc;
+$purple-light-3: #f4c8fa;
+$purple-dark: #160718;
+$purple-text: #e879f9;
+
+// Violet Palette
+
+$primary-violet: #7e22ce;
+$violet-text: #c084fc;
+$violet-dark: #0f0419;
+$violet-dark-2: #190729;
+$violet-light-1: #faf5ff;
+$violet-light-2: #e5d3f5;
+$violet-light-3: #d8bdf0;
+
+///Typography
+$link-font: "Barlow Semi Condensed";
+
+// Breakpoints
+$bp-largest: 1410px;
+$bp-large: 1200px;
+$bp-medium: 1010px;
+$bp-small: 950px;
+$bp-smaller: 695px;
+$bp-smallest-1: 585px;
+$bp-smallest-2: 410px;
+
+// Selection
+::selection {
+  color: $purple-light-1;
+  background: $primary-purple;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $violet-dark;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-family: "Outfit", sans-serif;
+  color: $purple-light-1;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 2rem;
+  color: $violet-light-2;
+  line-height: 1.1;
+  letter-spacing: 0.1rem;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  color: $purple-light-2;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  letter-spacing: -0.1rem;
+  font-size: 6rem;
+  display: inline-block;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 5rem;
+  }
+  @media only screen and (max-width: $bp-smallest-2) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  color: $purple-light-3;
+  font-weight: 200;
+  text-transform: uppercase;
+
+  font-size: 5rem;
+  display: inline-block;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  color: $violet-light-3;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  font-size: 2.5rem;
+  display: inline-block;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  color: $violet-light-1;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  font-size: 2rem;
+  display: inline-block;
+}

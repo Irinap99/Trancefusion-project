@@ -1,0 +1,300 @@
+.header {
+  width: 100vw;
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background-image: linear-gradient(to bottom, ($violet-dark 90%, transparent));
+  position: relative;
+  z-index: 999;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+  }
+  @media only screen and (max-width: $bp-smallest-1) {
+    height: 10rem;
+  }
+  @media only screen and (max-width: $bp-smallest-2) {
+    height: 5rem;
+    justify-content: space-evenly;
+  }
+
+  &__full-menu {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 10rem;
+
+    background-color: $violet-dark;
+    overflow: hidden;
+    height: 0%;
+    transition: all 0.3s;
+    // display: none;
+    @media only screen and (max-width: $bp-small) {
+      top: 5rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      top: 3rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      top: 2rem;
+      left: 10%;
+    }
+
+    &--links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    &--link:link,
+    &--link:visited {
+      display: block;
+      font-size: 2.4rem;
+      font-family: $link-font;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $purple-light-1;
+      opacity: 60%;
+      transition: all, 0.3s;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2rem;
+      }
+      @media only screen and (max-width: $bp-smallest-1) {
+        font-size: 1.6rem;
+      }
+    }
+    &--link:hover,
+    &--link:active {
+      opacity: 100%;
+    }
+  }
+
+  &__links {
+    @include MoveInBottom;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: $bp-medium) {
+      margin-right: 1rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      margin: 0;
+    }
+  }
+  &__link:link,
+  &__link:visited {
+    display: block;
+    padding: 1rem;
+    color: $primary-purple;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $link-font;
+    font-size: 3rem;
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 0.4rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 0.8rem;
+    }
+  }
+  &__link:hover,
+  &__link:active {
+    color: $purple-light-3;
+  }
+  &__logo-container {
+    @include MoveInBottom;
+    margin-right: auto;
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      margin-left: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      margin: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  &__logo {
+    height: 10rem;
+    width: auto;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 8rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      height: 6rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      height: 4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      height: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__menu {
+    width: 6rem;
+    height: 6rem;
+    @include gradient-border;
+    z-index: 9999;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include MoveInBottom;
+    @media only screen and (max-width: $bp-small) {
+      width: 4rem;
+      height: 4rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  &__menu:hover {
+    cursor: pointer;
+
+    box-shadow: 0 0 2rem 0.5rem rgba($primary-purple, 0.2);
+  }
+
+  &__menu-icon {
+    width: 3rem;
+    height: 0.2rem;
+    background-color: $violet-light-3;
+    position: relative;
+
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp-small) {
+      width: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      width: 1rem;
+      height: 0.1rem;
+    }
+    &::after,
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 3rem;
+      height: 0.2rem;
+      background-color: $violet-light-3;
+      position: absolute;
+      transition: transform, translate 0.4s;
+      @media only screen and (max-width: $bp-small) {
+        width: 2rem;
+      }
+      @media only screen and (max-width: $bp-smallest-1) {
+        width: 1rem;
+        height: 0.1rem;
+      }
+    }
+    &::before {
+      top: -0.8rem;
+      @media only screen and (max-width: $bp-smallest-1) {
+        top: -0.4rem;
+      }
+    }
+    &::after {
+      top: 0.8rem;
+      @media only screen and (max-width: $bp-smallest-1) {
+        top: 0.5rem;
+      }
+    }
+  }
+  &__menu.active {
+    .header__menu-icon {
+      transform: rotate(45deg);
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        transform: rotate(-90deg) translateX(0.6rem);
+        @media only screen and (max-width: $bp-small) {
+          transform: rotate(-90deg) translateX(0.7rem);
+        }
+        @media only screen and (max-width: $bp-smallest-1) {
+          transform: rotate(-90deg) translateX(0.5rem);
+        }
+      }
+    }
+
+    .header__full-menu {
+      left: -4rem;
+      height: 90vh;
+      padding: 4rem;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    gap: 1rem;
+  }
+  &__btn-component {
+    @include gradient-border;
+    @include MoveInBottom;
+    @media only screen and (max-width: $bp-smallest-1) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__btn:link,
+  &__btn:visited {
+    display: block;
+    padding: 1rem;
+    color: $primary-purple;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $link-font;
+    font-size: 3rem;
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 1.4rem;
+      padding: 0.5rem;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest-2) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__btn:hover {
+    box-shadow: 0 0 2rem 0.5rem rgba($primary-purple, 0.4);
+  }
+  &__btn:active {
+    color: $purple-light-3;
+  }
+}

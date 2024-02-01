@@ -1,0 +1,127 @@
+.popup {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgba(#000, 0.7);
+  z-index: 9999;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  @media only screen and (max-width: $bp-large) {
+  }
+
+  &__box {
+    width: 30%;
+    padding: 3rem;
+    background-image: linear-gradient($violet-dark, $violet-dark);
+    border-radius: 10px;
+    position: relative;
+    height: 90%;
+    @media only screen and (max-width: $bp-large) {
+      width: 40%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 60%;
+    }
+    @media only screen and (max-width: $bp-smallest-1) {
+      width: 100%;
+      height: 100%;
+    }
+    & h3 {
+      color: $primary-purple;
+      display: inline-block;
+      margin: 2rem 0;
+    }
+
+    & p {
+      display: inline-block;
+      padding-bottom: 1rem;
+      color: $purple-light-1;
+      font-size: 1.6rem;
+      border-bottom: 1px solid rgba($primary-purple, 0.5);
+      margin-bottom: 2rem;
+    }
+  }
+  &__icon {
+    color: $primary-purple;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    transition: color 0.3s;
+  }
+  &__icon:hover {
+    cursor: pointer;
+    color: $purple-light-3;
+  }
+  &__form form {
+    color: $purple-light-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.8rem;
+    padding: 1rem;
+    font-weight: 300;
+  }
+  &__form input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    width: 60%;
+    flex: 1;
+    background-color: $purple-light-2;
+  }
+  &__form input:focus {
+    outline: 3px solid rgba($primary-purple, 0.9);
+  }
+  &__form label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    flex: 1;
+  }
+  &__terms {
+    font-size: 1.2rem;
+  }
+  &__checkbox-link {
+    color: $primary-purple;
+  }
+  input[type="checkbox"] {
+    accent-color: $primary-purple;
+    width: auto;
+  }
+  &__submit {
+    @include gradient-border;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+  }
+  &__btn {
+    display: inline-block;
+    background-color: transparent;
+    color: $purple-light-2;
+    font-family: $link-font;
+    font-size: 3rem;
+    border: none;
+    padding: 1rem;
+    transition: all 0.3s;
+  }
+  &__btn:hover,
+  &__btn:active {
+    cursor: pointer;
+    box-shadow: 0 0 2rem 0 rgba($primary-purple, 0.4);
+    color: $purple-light-1;
+  }
+}
+.hidden {
+  display: none;
+}
