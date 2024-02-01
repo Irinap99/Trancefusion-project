@@ -1,7 +1,7 @@
 .hero {
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/img-1.png);
+  background-image: url(../img/img-1.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -69,7 +69,7 @@
     font-weight: 300;
     text-transform: uppercase;
     color: $violet-light-3;
-    margin-left: 8rem;
+    margin-left: 6rem;
     margin-bottom: 1rem;
     @media only screen and (max-width: $bp-small) {
       margin-left: 4rem;
@@ -139,6 +139,7 @@
   &__cta-border {
     @include MoveInBottom;
     // @include gradient-border;
+    margin-top: 4rem;
     display: inline-block;
     position: absolute;
     right: 55%;
@@ -154,7 +155,7 @@
       right: 60%;
     }
     @media only screen and (max-width: $bp-smallest-1) {
-      top: 25%;
+      top: 15%;
       right: 40%;
     }
     @media only screen and (max-width: $bp-smallest-2) {
