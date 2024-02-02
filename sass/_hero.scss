@@ -32,14 +32,26 @@
   &__text-box {
     z-index: 100;
     margin-left: 6rem;
+    display: flex;
+    flex-direction: column;
     @media only screen and (max-width: $bp-smaller) {
       margin-left: 4rem;
     }
     @media only screen and (max-width: $bp-smallest-1) {
       margin-left: 2rem;
+      align-items: center;
+      justify-content: center;
     }
     @media only screen and (max-width: $bp-smallest-2) {
       margin-top: 15rem;
+    }
+  }
+
+  &__subtitle-box {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: $bp-smallest-1) {
+      flex-direction: row;
     }
   }
 
@@ -124,7 +136,7 @@
     margin: 1.5rem 0;
     @include MoveInBottom;
     position: relative;
-    margin-bottom: 4rem;
+    // margin-bottom: 4rem;
     @media only screen and (max-width: $bp-largest) {
       font-size: 1.6rem;
     }
@@ -134,34 +146,18 @@
     @media only screen and (max-width: $bp-smaller) {
       font-size: 1rem;
     }
+    @media only screen and (max-width: $bp-smallest-3) {
+      font-size: 0.8rem;
+    }
   }
 
   &__cta-border {
     @include MoveInBottom;
-    // @include gradient-border;
     margin-top: 4rem;
     display: inline-block;
-    position: absolute;
-    right: 55%;
-    top: 50%;
-    @media only screen and (max-width: $bp-large) {
-      top: 60%;
-    }
-    @media only screen and (max-width: $bp-medium) {
-      top: 50%;
-    }
-    @media only screen and (max-width: $bp-smaller) {
-      top: 45%;
-      right: 60%;
-    }
-    @media only screen and (max-width: $bp-smallest-1) {
-      top: 15%;
-      right: 40%;
-    }
-    @media only screen and (max-width: $bp-smallest-2) {
-      top: 40%;
-      right: 30%;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__cta:link,
   &__cta:visited {
@@ -185,6 +181,9 @@
     }
     @media only screen and (max-width: $bp-smallest-1) {
       padding: 0.5rem;
+    }
+    @media only screen and (max-width: $bp-smallest-3) {
+      font-size: 1.4rem;
     }
   }
 
@@ -224,6 +223,9 @@
       background-image: none;
       background-origin: unset;
       background-clip: unset;
+    }
+    @media only screen and (max-width: $bp-smallest-3) {
+      margin-top: 2rem;
     }
   }
 
